@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ensaio fotográfico Externo — Rafael Renan</title>
+<meta name="description" content="Proposta exclusiva de ensaio fotográfico externo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#eef4ff;--ink:#000;--mut:#4b5568;--line:#d6e2fb;--b:#087BFF;--r:#0033CC;--disp:"Bricolage Grotesque","Arial Black",Arial,sans-serif;--sans:"Manrope",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+.in{max-width:1040px;margin:0 auto;padding:0 22px}
+.disp{font:800 clamp(34px,6vw,64px)/1 var(--disp);letter-spacing:-.045em}
+.eyebrow{display:block;font:700 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-bottom:12px}
+.c{text-align:center}
+.sub{color:var(--mut);font-size:17px;margin-top:10px}
+section{padding:clamp(56px,8vw,100px) 0;scroll-margin-top:20px}
+.bu{opacity:0;transform:translateY(28px);filter:blur(12px);transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:var(--d,0s)}
+.bu.on{opacity:1;transform:none;filter:none}
+@media(prefers-reduced-motion:reduce){.bu{opacity:1;transform:none;filter:none;transition:none}}
+
+/* botões */
+.cta{display:inline-flex;align-items:center;gap:14px;border:0;border-radius:16px;padding:8px 8px 8px 26px;background:linear-gradient(135deg,var(--b),var(--r));color:#fff;font:700 18px var(--sans);letter-spacing:-.01em;cursor:pointer;box-shadow:0 14px 34px rgba(8,123,255,.35),inset 0 1px 0 rgba(255,255,255,.3);transition:transform .3s var(--ease),box-shadow .3s}
+.cta i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:11px;background:#fff;color:var(--r);transition:transform .35s var(--ease)}
+.cta:hover{transform:scale(1.03);box-shadow:0 18px 44px rgba(0,51,204,.4),inset 0 1px 0 rgba(255,255,255,.3)}
+.cta:hover i{transform:translateX(3px)}
+.btn{display:inline-block;border:1.5px solid var(--ink);background:transparent;border-radius:12px;padding:10px 22px;font:700 15px var(--sans);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--b);border-color:var(--b);color:#fff}
+.pill{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:14px;padding:14px 28px;background:#fff;color:var(--r);font:700 16px var(--sans);cursor:pointer;transition:transform .3s var(--ease),background .25s,color .25s}
+.pill:hover{transform:scale(1.04);background:#000;color:#fff}
+.pill svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* capa */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:#fff;padding:0 22px clamp(48px,9vh,90px);background:linear-gradient(160deg,var(--r),#001a66);overflow:hidden}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,10,40,.15),rgba(0,10,40,.62))}
+.hero>div{position:relative;z-index:2}
+.hero .disp{font-size:clamp(40px,8vw,84px)}
+.hero .tipo{display:block;margin-top:14px;font:700 15px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:#cfe3ff}
+.hero .scroll{display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-top:34px;font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#cfe3ff}
+.hero .scroll b{font-size:20px;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){.hero .scroll b{animation:none}}
+
+/* frase */
+.quote{background:var(--soft);padding:clamp(28px,4vw,44px) 0}
+.quote p{max-width:30em;margin:0 auto;padding:0 22px;font:500 clamp(17px,2.2vw,21px)/1.45 var(--sans);color:var(--r);text-align:center}
+.quote p:before{content:"“";font:800 1.8em/0 var(--disp);color:var(--b);margin-right:6px;vertical-align:-.25em}
+
+/* portfólio */
+.pf{columns:2;column-gap:16px;margin-top:clamp(28px,4vw,48px)}
+.pi{position:relative;display:block;width:100%;margin:0 0 16px;break-inside:avoid;border:0;padding:0;border-radius:18px;overflow:hidden;cursor:pointer;background:var(--soft);aspect-ratio:var(--ar,4/5);box-shadow:0 14px 40px rgba(0,51,204,.16)}
+.pi.has{aspect-ratio:auto}.pi.has img{height:auto}
+.pi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.pi:hover img{transform:scale(1.05)}
+.ph{position:absolute;inset:0;display:grid;place-items:center;font-size:15px;font-weight:600;background:linear-gradient(170deg,#e6f0ff,#cfe0ff);color:var(--r)}
+@media(max-width:600px){.pf{column-gap:12px}.pi{border-radius:14px;margin-bottom:12px}}
+
+/* pacotes */
+.pk{background:var(--soft)}
+.pks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:clamp(28px,4vw,48px)}
+.pkg{position:relative;width:calc((100% - 32px)/3);min-width:240px;max-width:320px;background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:16px;transition:transform .4s var(--ease),border-color .3s,box-shadow .3s}
+.pkg:hover{transform:translateY(-6px);border-color:var(--b);box-shadow:0 18px 44px rgba(0,51,204,.14)}
+.pkg.rec{border:2px solid var(--b)}
+.badge{position:absolute;top:-12px;right:18px;background:linear-gradient(135deg,var(--b),var(--r));color:#fff;font:700 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:8px}
+.pkg h3{font:700 24px/1.1 var(--disp);letter-spacing:-.035em}
+.pkg .prazo{font-size:14px;color:var(--mut);margin-top:-8px}
+.pkg ul{list-style:none;padding:0;display:grid;gap:8px;font-size:15px;padding-bottom:16px;border-bottom:1.5px solid var(--line)}
+.pkg li{display:flex;gap:10px;align-items:center}
+.pkg li:before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:var(--b) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/11px no-repeat}
+.preco{font:800 34px/1 var(--disp);letter-spacing:-.04em}
+.parc{font-size:14px;color:var(--mut);margin-top:-8px}
+.pkg .btn{align-self:flex-start;margin-top:auto}
+@media(max-width:860px){.pkg{width:calc((100% - 16px)/2)}}
+@media(max-width:560px){.pkg{width:100%;max-width:none}}
+
+/* agenda */
+.ag h2{margin-bottom:26px}
+
+/* conversar */
+.talk{background:linear-gradient(135deg,var(--r),#001a66);color:#fff}
+.talk .eyebrow{color:#8fc2ff}
+.talk p{color:#c9d9ff;margin:12px auto 28px;max-width:24em}
+
+/* informações */
+.tl{position:relative;max-width:620px;margin:clamp(32px,5vw,56px) auto 0;padding-left:36px;display:grid;gap:34px}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.st{position:relative}
+.st:before{content:"";position:absolute;left:-36px;top:5px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--b)}
+.st em{display:block;font:700 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--b);font-style:normal}
+.st h3{font:700 24px/1.15 var(--disp);letter-spacing:-.03em;margin:4px 0 6px}
+.st p{font-size:16px;line-height:1.5;color:var(--mut)}
+
+/* sobre */
+.about{background:#000;color:#fff;padding:0;overflow:hidden}
+.ab{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.abt{padding:clamp(48px,7vw,90px) 22px clamp(48px,7vw,90px);align-self:center}
+.abt p{color:#a9b6d3;font-size:17px;line-height:1.5;max-width:26em}
+.abt p+p{margin-top:8px}
+.handles{display:inline-flex;flex-wrap:wrap;border:1.5px solid var(--b);border-radius:10px;margin-bottom:20px}.handles span{padding:6px 16px;font:600 14px var(--sans);color:#dbe6ff}.handles span+span{border-left:1.5px solid var(--b)}
+.facts{list-style:none;padding:0;margin:30px 0 22px;max-width:26em}
+.facts li{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid rgba(255,255,255,.18);font-size:15px;color:#dbe6ff}
+.facts li:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.ic{flex:none;width:34px;height:34px;border-radius:10px;background:var(--b);display:grid;place-items:center}
+.ic svg,.soc svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.socs{display:flex;gap:10px}
+.soc{width:40px;height:40px;border-radius:12px;border:1.5px solid rgba(255,255,255,.4);display:grid;place-items:center;transition:background .25s,border-color .25s}
+.soc:hover{background:var(--b);border-color:var(--b)}
+.abp{position:relative;min-height:440px}
+.abp .foto{position:absolute;inset:clamp(20px,4vw,48px) 0;overflow:hidden;background:linear-gradient(160deg,#0a2a78,#000)}
+.abp img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1)}
+.abp .ph{background:none;color:#6fb1ff}
+.nm{position:absolute;left:.3em;bottom:clamp(40px,8vw,90px);z-index:2;writing-mode:vertical-rl;font:800 clamp(40px,6.5vw,78px)/.95 var(--disp);letter-spacing:-.04em;color:#fff;text-shadow:0 0 24px rgba(0,0,0,.5)}
+.nm span{color:var(--b)}
+@media(max-width:760px){.ab{grid-template-columns:1fr}.abp{min-height:420px}.nm{left:18px;writing-mode:horizontal-tb;bottom:28px;font-size:44px}}
+
+footer{padding:28px 22px calc(28px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--mut);font-size:14px;background:#fff}
+footer i{display:block;margin-bottom:4px}
+
+/* lightbox */
+dialog{border:0;background:transparent;padding:0;max-width:none;max-height:none;width:100%;height:100%;overflow:auto}
+dialog::backdrop{background:rgba(0,10,40,.78);backdrop-filter:blur(12px)}
+.mbox{min-height:100%;display:grid;place-items:center;padding:20px}
+.mbox img{max-height:88vh;max-width:100%;border-radius:14px;object-fit:contain}
+.x{position:fixed;top:14px;right:14px;width:44px;height:44px;border-radius:12px;border:0;background:#fff;color:#000;font-size:22px;cursor:pointer;z-index:2}
+</style>
+</head>
+<body>
+
+<header class="hero" id="hero">
+  <div>
+    <h1 class="disp bu">Ensaio fotográfico</h1>
+    <span class="tipo bu" style="--d:.15s" id="tipo"></span>
+    <a class="scroll bu" style="--d:.3s" href="#portfolio">Deslize para ver <b>↓</b></a>
+  </div>
+</header>
+
+<section id="portfolio">
+  <div class="in c">
+    <h2 class="disp bu">Portfólio</h2>
+    <div class="pf" id="pf"></div>
+  </div>
+</section>
+
+<section class="pk" id="pacotes">
+  <div class="in c">
+    <h2 class="disp bu">Investimento</h2>
+    <p class="sub bu" style="--d:.1s">Escolha o pacote ideal para você</p>
+    <div class="pks" id="pks"></div>
+    <p class="sub bu" style="margin-top:clamp(40px,6vw,72px)">Ou, se preferir, ensaio por hora</p>
+    <div class="pks" id="hrs"></div>
+  </div>
+</section>
+
+<section class="talk c" id="contato">
+  <div class="in">
+    <span class="eyebrow bu">Agende</span>
+    <h2 class="disp bu" style="--d:.1s">Vamos conversar?</h2>
+    <p class="bu" style="--d:.15s">Escolha o melhor dia para o seu ensaio e saiba mais informações.</p>
+    <button class="pill bu" style="--d:.2s" data-wa="disp"><svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-.9.7a3.6 3.6 0 0 1-1.6-1.6l.7-.9-1-2z"/></svg>Agende agora no WhatsApp</button>
+  </div>
+</section>
+
+<section id="info">
+  <div class="in">
+    <div class="c">
+      <h2 class="disp bu">Informações importantes</h2>
+      <p class="sub bu" style="--d:.1s">Atenção</p>
+    </div>
+    <div class="tl" id="tl"></div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="ab">
+    <div class="abt">
+      <span class="eyebrow bu">Sobre mim</span>
+      <div class="handles bu"><span id="hIg"></span><span>Vídeo</span><span>Foto</span><span>Design</span></div>
+      <p class="bu" style="--d:.05s" id="sobreTxt"></p>
+      <ul class="facts bu" style="--d:.1s">
+        <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-2.5 5 2.5-1.5-7.5"/></svg></span>+100 projetos entregues</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span>Qualidade e eficiência</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span id="cidade"></span></li>
+      </ul>
+      <div class="socs bu" style="--d:.15s">
+        <a class="soc" id="sIg" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7h.01"/></svg></a>
+        <a class="soc" id="sWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-.9.7a3.6 3.6 0 0 1-1.6-1.6l.7-.9-1-2z"/></svg></a>
+        <a class="soc" id="sMail" href="#" aria-label="E-mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7.5l8 6 8-6"/></svg></a>
+      </div>
+    </div>
+    <div class="abp">
+      <div class="foto bu" id="fotoSobre"><div class="ph">Foto sobre</div></div>
+      <div class="nm bu" style="--d:.2s" id="nm"></div>
+    </div>
+  </div>
+</section>
+
+<footer><i>Proposta exclusiva preparada com carinho.</i><span id="pow"></span></footer>
+
+<dialog id="modal" aria-label="Foto ampliada"><div class="mbox"><img id="big" alt=""></div><button class="x" data-close aria-label="Fechar">×</button></dialog>
+
+<script>
+/* ====== EDITE AQUI ====== */
+const NOME="Rafael Renan";
+const WHATSAPP="5583982094055";        // só números, com 55 + DDD. Ex.: 5583999999999
+const INSTAGRAM="renan.audiovisual";       // sem @
+const EMAIL="";
+const CIDADE="Campina Grande PB e região";
+const TIPO="Externo";
+const SOBRE=["Desde 2024, transformando ideias em experiências visuais por meio da fotografia, do design gráfico e da produção audiovisual."];
+const POWERED="";         // ex.: "Feito por Renan Audiovisual" (vazio = não mostra)
+const FOTO_CAPA="https://i.postimg.cc/prh66ctZ/Foto-1.jpg";       // link ou arquivo da foto da capa
+const FOTO_SOBRE="https://i.postimg.cc/fT6wV02m/fe-badin-0451.jpg";      // foto da fotógrafa (fica em preto e branco)
+const PORTFOLIO=[{src:"https://i.postimg.cc/prh66ctZ/Foto-1.jpg",title:"Foto 1"},{src:"https://i.postimg.cc/1Xkjh0m5/Foto-2.jpg",title:"Foto 2"},{src:"https://i.postimg.cc/Wbr2DXkR/Foto-5.jpg",title:"Foto 3"},{src:"https://i.postimg.cc/FKFmBvCy/Foto-6.jpg",title:"Foto 4"},{src:"https://i.postimg.cc/h4xR01mN/MG-8748.jpg",title:"Foto 5"},{src:"https://i.postimg.cc/1zTbG852/MG-8766.jpg",title:"Foto 6"},{src:"https://i.postimg.cc/tCywNQy8/MG-8824.jpg",title:"Foto 7"},{src:"https://i.postimg.cc/K8pWb1LB/15-2.jpg",title:"Foto 8"},{src:"https://i.postimg.cc/ZRps6jQ6/7-2.jpg",title:"Foto 9"},{src:"https://i.postimg.cc/BZ5w6YDw/17-2.jpg",title:"Foto 10"},{src:"https://i.postimg.cc/P5J6Sdcq/14-2.jpg",title:"Foto 11"},{src:"https://i.postimg.cc/XJfxrqZd/19-2.jpg",title:"Foto 12"},{src:"https://i.postimg.cc/FsWpd2Kw/21.jpg",title:"Foto 13"}];
+const PACOTES=[
+ {n:"Básico",fotos:15,preco:"80,00"},
+ {n:"Essencial",fotos:30,preco:"150,00",rec:true},
+ {n:"Intermediário",fotos:50,preco:"220,00"},
+ {n:"Premium",fotos:65,preco:"300,00",parc:"ou 2x R$ 157,50"}   /* confira o valor da parcela */
+];
+const HORAS=[{h:1,preco:"220,00"},{h:2,preco:"440,00"},{h:3,preco:"660,00"}];
+const FOTO_EXTRA="R$ 14";
+const PRAZO="3 dias úteis";
+const INFO=[
+ {t:"Desistência",d:"Em caso de desistência por parte do cliente, o valor do sinal não será devolvido, pois a data ficou indisponível para outros clientes. Caso seja necessário remarcar, a alteração dependerá da disponibilidade de agenda. Avisar com antecedência."},
+ {t:"Divulgação",d:"As imagens poderão ser utilizadas para divulgação do trabalho da fotógrafa/videomaker em redes sociais e portfólio."},
+ {t:"Entrega",d:"O prazo de entrega das fotos e vídeos começa a contar após a escolha das fotos. O material será entregue em alta qualidade por meio de link para download, galeria online ou outro formato combinado."},
+ {t:"Sobre os pacotes",d:"Após escolher o pacote e realizar o ensaio fotográfico você não poderá alterá-lo, as fotos extras serão cobradas separadamente."}
+];
+/* ======================== */
+const $=id=>document.getElementById(id);
+const wa=m=>WHATSAPP?"https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(m):"#";
+const first=NOME.split(" ")[0];
+const tipoL=TIPO.toLowerCase();
+
+$("tipo").textContent=TIPO;
+$("nm").innerHTML=NOME;
+$("sobreTxt").innerHTML=SOBRE.join("<br>");
+$("cidade").textContent=CIDADE;
+$("pow").textContent=POWERED;
+if(FOTO_CAPA){const i=new Image();i.className="bg";i.alt="";i.src=FOTO_CAPA;$("hero").prepend(i)}
+if(FOTO_SOBRE){const i=new Image();i.alt=NOME;i.src=FOTO_SOBRE;$("fotoSobre").replaceChildren(i)}
+$("sIg").href=INSTAGRAM?"https://instagram.com/"+INSTAGRAM:"#";
+$("sWa").href=wa("Oi "+first+"! Vi a proposta do ensaio "+tipoL+" e gostaria de mais informações.");
+$("sMail").href=EMAIL?"mailto:"+EMAIL:"#";
+$("hIg").textContent="@"+INSTAGRAM; if(!EMAIL)$("sMail").remove();
+{const ul=document.querySelector(".facts");ul.prepend(ul.lastElementChild)}
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.12});
+
+PORTFOLIO.forEach((f,i)=>{
+  const b=document.createElement("button");b.className="pi bu"+(f.src?" has":"");b.style.setProperty("--ar",f.ar||"4/5");b.style.setProperty("--d",i*.1+"s");b.setAttribute("aria-label","Ampliar foto "+(i+1));
+  b.innerHTML=f.src?'<img loading="lazy" alt="'+(f.title||"")+'" src="'+f.src+'">':'<div class="ph">Sua foto aqui</div>';
+  if(f.src)b.onclick=()=>{$("big").src=f.src;$("big").alt=f.title||"";$("modal").showModal()};
+  $("pf").appendChild(b);
+});
+
+HORAS.forEach((p,i)=>{
+  const t=p.h+(p.h>1?" horas":" hora"),d=document.createElement("div");d.className="pkg bu";d.style.setProperty("--d",(i%3)*.08+"s");
+  d.innerHTML='<h3>Ensaio de '+t+'</h3><ul><li>'+t+' de ensaio</li><li>Média de '+p.h*20+' a '+p.h*40+' fotos</li><li>Foto extra: '+FOTO_EXTRA+'</li></ul><div><div class="preco">R$ '+p.preco+'</div></div><a class="btn" target="_blank" rel="noopener" href="'+wa("Oi "+first+"! Vi a proposta do ensaio "+tipoL+" e quero o ensaio por hora de "+t+" (média de "+p.h*20+" a "+p.h*40+" fotos, R$ "+p.preco+").")+'">Escolher este</a>';
+  $("hrs").appendChild(d);
+});
+
+PACOTES.forEach((p,i)=>{
+  const d=document.createElement("div");d.className="pkg bu"+(p.rec?" rec":"");d.style.setProperty("--d",(i%3)*.08+"s");
+  d.innerHTML=(p.rec?'<span class="badge">Recomendado</span>':'')+'<h3>'+p.n+'</h3><div class="prazo">Prazo de entrega: '+PRAZO+'</div><ul><li>'+p.fotos+' fotos incluídas</li><li>Foto extra: '+FOTO_EXTRA+'</li></ul><div><div class="preco">R$ '+p.preco+'</div>'+(p.parc?'<div class="parc">'+p.parc+'</div>':'')+'</div><a class="btn" target="_blank" rel="noopener" href="'+wa("Oi "+first+"! Vi a proposta do ensaio "+tipoL+" e quero o pacote "+p.n+" ("+p.fotos+" fotos, R$ "+p.preco+").")+'">Escolher este</a>';
+  $("pks").appendChild(d);
+});
+
+INFO.forEach((s,i)=>{
+  const d=document.createElement("div");d.className="st bu";d.style.setProperty("--d",i*.06+"s");
+  d.innerHTML='<em>Etapa '+String(i+1).padStart(2,"0")+'</em><h3>'+s.t+'</h3><p>'+s.d+'</p>';
+  $("tl").appendChild(d);
+});
+
+document.querySelectorAll("[data-wa]").forEach(b=>b.addEventListener("click",()=>{
+  const m=b.dataset.wa==="disp"?"Oi "+first+"! Vi a proposta do ensaio "+tipoL+" e quero ver a disponibilidade de datas e saber mais informações.":"Oi "+first+"! Vi a proposta do ensaio "+tipoL+" e gostaria de mais informações.";
+  const u=wa(m);if(u!=="#")window.open(u,"_blank");
+}));
+
+document.querySelectorAll(".bu").forEach(e=>io.observe(e));
+const modal=$("modal");
+document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>modal.close());
+modal.addEventListener("click",e=>{if(e.target===modal||e.target.classList.contains("mbox"))modal.close()});
+</script>
+</body>
+</html>
